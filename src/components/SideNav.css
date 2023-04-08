@@ -1,0 +1,60 @@
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    height: 100vh;
+    background-color: #222;
+    padding: 20px;
+  }
+  
+  .side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .side-nav li {
+    margin-bottom: 15px;
+  }
+  
+  .side-nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .side-nav a.active {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* ... existing styles ... */
+
+.create-prompt-btn {
+  display: flex;
+  align-items: center;
+  background-color: #444;
+  color: #ccc;
+  border: none;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+}
+
+.create-prompt-btn:hover {
+  background-color: #555;
+}
+
+.create-prompt-btn i {
+  margin-right: 5px;
+}
+
+.separator {
+  height: 1px;
+  width: 95%;
+  background-color: #555;
+  margin: 10px 0;
+}

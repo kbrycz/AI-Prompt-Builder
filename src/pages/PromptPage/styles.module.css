@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(100vh - 20px);
+    color: #ccc;
+    font-family: 'Roboto', sans-serif;
+    background-color: #333;
+    padding-top: 20px;
+  }
+  
+  .deleteBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #444;
+    color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .deleteBtn:hover {
+    background-color: #555;
+  }
+  
+  .prompt-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
