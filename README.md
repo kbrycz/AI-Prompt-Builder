@@ -2,7 +2,7 @@
 
 An innovative app designed to streamline the creation of prompts for ChatGPT. This app allows you to effortlessly generate structured prompts by simply pasting in the core content. Save time and enhance your ChatGPT experience with this user-friendly app, tailored to make prompt generation a breeze.
 
-Built with Electron, this app is cross-platform and can be used on Windows, macOS, and Linux.
+Built with React.
 
 ## Prerequisites
 
