@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Settings from './pages/Settings';
 import PromptPage from './pages/PromptPage';
 import './App.css';
+import CreateScreen from './pages/Create';
 
 function App() {
   const [prompts, setPrompts] = useState(() => {
@@ -19,10 +20,14 @@ function App() {
   const handleDeletePrompt = (name) => {
     const shouldDelete = window.confirm(`Are you sure you would like to delete "${name}"?`);
     if (shouldDelete) {
-      setPrompts(prompts.filter((prompt) => prompt !== name));
+      setPrompts(prompts.filter((prompt) => prompt.name !== name));
     }
   };
   
+
+  const handleCreatePrompt = (name, templateText) => {
+    setPrompts([...prompts, { name, templateText }]);
+  };
 
 
   return (
@@ -34,10 +39,13 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/settings" element={<Settings />} />
             <Route
+              path="/create"
+              element={<CreateScreen onCreate={handleCreatePrompt} />}
+            />
+            <Route
               path="/prompt/:name"
               element={<PromptPage prompts={prompts} onDelete={handleDeletePrompt} />}
             />
-
           </Routes>
         </div>
       </div>

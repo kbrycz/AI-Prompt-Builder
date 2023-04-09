@@ -6,14 +6,23 @@ const Home = () => {
     <div className={styles.container}>
       <h1>AI Prompt Builder</h1>
       <p>
-        This is a simple AI Prompt Builder that helps you create prompts for
-        various purposes.
+        Welcome to the AI Prompt Builder, a tool designed to help you create
+        effective prompts for your AI chatbots, quickly and efficiently.
       </p>
-      <ol>
-        <li>Enter your prompt details</li>
-        <li>Choose your desired AI model</li>
-        <li>Generate your prompt</li>
-      </ol>
+      <p>
+        With this tool, you can:
+      </p>
+      <ul>
+        <li>Create reusable prompt templates</li>
+        <li>Easily insert variables into your prompts</li>
+        <li>Speed up the prompt creation process</li>
+      </ul>
+      <p>
+        To get started, simply create a new prompt template by clicking the "+" button in the navigation pane. Then, follow the instructions to add variables and generate your prompt.
+      </p>
+      <p>
+        Example template: "Hi, my name is "
+      </p>
     </div>
   );
 };
