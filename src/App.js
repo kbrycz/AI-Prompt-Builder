@@ -6,6 +6,7 @@ import Settings from './pages/Settings';
 import PromptPage from './pages/PromptPage';
 import './App.css';
 import CreateScreen from './pages/Create';
+import MobileNav from './components/MobileNav';
 
 function App() {
   const [prompts, setPrompts] = useState(() => {
@@ -43,28 +44,23 @@ function App() {
   };
 
   return (
-      <Router>
-        <div className="app-container">
-          <SideNav prompts={prompts} setPrompts={setPrompts} />
-          <div className="page-container">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route
-                path="/settings"
-                element={<Settings setPrompts={setPrompts} />}
-              />
-              <Route
-                path="/create"
-                element={<CreateScreen onCreate={handleCreatePrompt} />}
-              />
-              <Route
-                path="/prompt/:name"
-                element={<PromptPage prompts={prompts} onDelete={handleDeletePrompt} onUpdate={updatePrompt} />}
-              />
-            </Routes>
-          </div>
+    <Router>
+      <div className="app-container">
+        <SideNav prompts={prompts} setPrompts={setPrompts} />
+        <MobileNav prompts={prompts} />
+        <div className="page-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/settings" element={<Settings setPrompts={setPrompts} />} />
+            <Route path="/create" element={<CreateScreen onCreate={handleCreatePrompt} />} />
+            <Route
+              path="/prompt/:name"
+              element={<PromptPage prompts={prompts} onDelete={handleDeletePrompt} onUpdate={updatePrompt} />}
+            />
+          </Routes>
         </div>
-      </Router>
+      </div>
+    </Router>
   );
 }
 

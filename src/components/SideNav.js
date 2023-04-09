@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './SideNav.css';
 
 const SideNav = ({ prompts }) => {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     sessionStorage.setItem('prompts', JSON.stringify(prompts));
@@ -11,6 +12,11 @@ const SideNav = ({ prompts }) => {
 
   const handleNavigateToCreateScreen = () => {
     navigate('/create');
+    setMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (

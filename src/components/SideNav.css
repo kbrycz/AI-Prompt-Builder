@@ -28,8 +28,6 @@
     color: #fff;
     font-weight: bold;
   }
-  
-  /* ... existing styles ... */
 
 .create-prompt-btn {
   display: flex;
@@ -57,4 +55,11 @@
   width: 95%;
   background-color: #555;
   margin: 10px 0;
+}
+
+/* Add the following rule at the end of the file */
+@media (max-width: 768px) {
+  .side-nav {
+    display: none;
+  }
 }
