@@ -29,27 +29,42 @@ function App() {
     setPrompts([...prompts, { name, templateText }]);
   };
 
+  const updatePrompt = (oldName, newName, newTemplateText) => {
+    const updatedPrompts = prompts.map((prompt) => {
+      if (prompt.name === oldName) {
+        return {
+          name: newName,
+          templateText: newTemplateText,
+        };
+      }
+      return prompt;
+    });
+    setPrompts(updatedPrompts);
+  };
 
   return (
-    <Router>
-      <div className="app-container">
-        <SideNav prompts={prompts} setPrompts={setPrompts} />
-        <div className="page-container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route
-              path="/create"
-              element={<CreateScreen onCreate={handleCreatePrompt} />}
-            />
-            <Route
-              path="/prompt/:name"
-              element={<PromptPage prompts={prompts} onDelete={handleDeletePrompt} />}
-            />
-          </Routes>
+      <Router>
+        <div className="app-container">
+          <SideNav prompts={prompts} setPrompts={setPrompts} />
+          <div className="page-container">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route
+                path="/settings"
+                element={<Settings setPrompts={setPrompts} />}
+              />
+              <Route
+                path="/create"
+                element={<CreateScreen onCreate={handleCreatePrompt} />}
+              />
+              <Route
+                path="/prompt/:name"
+                element={<PromptPage prompts={prompts} onDelete={handleDeletePrompt} onUpdate={updatePrompt} />}
+              />
+            </Routes>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
   );
 }
 
