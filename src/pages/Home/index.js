@@ -2,27 +2,58 @@ import React from 'react';
 import styles from './styles.module.css';
 
 const Home = () => {
+  const handleCopy = (output) => {
+    navigator.clipboard.writeText(output).then(
+      () => {
+        console.log('Text copied to clipboard');
+      },
+      (err) => {
+        console.error('Could not copy text: ', err);
+      }
+    );
+  };
   return (
     <div className={styles.container}>
-      <h1>AI Prompt Builder</h1>
+      <h1>Bob the Prompt Builder</h1>
       <p>
         Welcome to the AI Prompt Builder, a tool designed to help you create
         effective prompts for your AI chatbots, quickly and efficiently.
       </p>
-      <p>
-        With this tool, you can:
-      </p>
-      <ul>
-        <li>Create reusable prompt templates</li>
-        <li>Easily insert variables into your prompts</li>
-        <li>Speed up the prompt creation process</li>
-      </ul>
-      <p>
-        To get started, simply create a new prompt template by clicking the "+" button in the navigation pane. Then, follow the instructions to add variables and generate your prompt.
-      </p>
-      <p>
-        Example template: "Hi, my name is "
-      </p>
+
+        <div className={styles.outputContainer2}>
+          <p className={styles.outputStyling}>I am working on a react application and I have came across an issue with my code.</p>
+          <p className={styles.outputStyling}>Can you explain what the issue might be and give me some common steps to solve it?</p>
+        <pre
+        className={styles.outputStylingStrong}
+          dangerouslySetInnerHTML={{
+            __html: `
+Unhandled Rejection (Invariant Violation): Element type is invalid: expected a string (for built-in components) or a class/function 
+(for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, 
+or you might have mixed up default and named imports.
+
+Check the render method of 'App'.
+    at ReactDOMServerRenderer.render (react-dom-server.browser.development.js:2540)
+    at ReactDOMServerRenderer.read (react-dom-server.browser.development.js:2487)
+
+            `,
+          }}
+        />
+        <p className={styles.outputStyling}>Please explain it to me like im a beginner programmer!</p>
+          <div className={styles.copyBtnWrapper}>
+            <button className={styles.copyBtn} onClick={handleCopy}>
+              Copy
+            </button>
+          </div>
+        </div>
+        <p className={styles.featuresHeading}>
+          With this tool, you can:
+        </p>
+        <ul className={styles.featuresList}>
+          <li className={styles.featuresListItem}>Create reusable prompt templates</li>
+          <li className={styles.featuresListItem}>Easily insert variables into your prompts</li>
+          <li className={styles.featuresListItem}>Speed up the prompt creation process</li>
+        </ul>
+
     </div>
   );
 };

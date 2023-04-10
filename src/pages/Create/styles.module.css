@@ -87,3 +87,10 @@
     font-family: 'Roboto', sans-serif;
   }
 
+  @media (max-width: 768px) {
+    .form {
+      width: 95%;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+    }
+  }

@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './SideNav.css';
 
 const SideNav = ({ prompts }) => {
   const navigate = useNavigate();
-  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     sessionStorage.setItem('prompts', JSON.stringify(prompts));
@@ -12,11 +11,6 @@ const SideNav = ({ prompts }) => {
 
   const handleNavigateToCreateScreen = () => {
     navigate('/create');
-    setMenuOpen(false);
-  };
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
   };
 
   return (
@@ -43,7 +37,7 @@ const SideNav = ({ prompts }) => {
           </li>
         </ul>
       ))}
-    <button onClick={handleNavigateToCreateScreen} className="create-prompt-btn">
+    <button onClick={handleNavigateToCreateScreen} className="create-prompt-btn2">
       <i className="fas fa-plus"></i> Create Prompt
     </button>
     </nav>

@@ -29,7 +29,8 @@
     font-weight: bold;
   }
 
-.create-prompt-btn {
+.create-prompt-btn2 {
+  width: 80%;
   display: flex;
   align-items: center;
   background-color: #444;
@@ -39,7 +40,8 @@
   margin: 10px 0;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
-  text-align: left;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .create-prompt-btn:hover {
@@ -62,4 +64,8 @@
   .side-nav {
     display: none;
   }
+}
+
+i {
+  margin-right: 10px;
 }

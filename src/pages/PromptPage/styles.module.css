@@ -109,6 +109,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     margin: auto;
+    margin-bottom: 1rem;
   }
   
   .submitBtn:hover {
@@ -173,3 +174,27 @@
   .inputGroupPrompt {
     width: 100%;
   }
+
+  .preOutput strong {
+    font-weight: bold;
+    color: #70b4eb;
+  }
+
+  @media (max-width: 768px) {
+    .form {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    .editBtn {
+      top: 50px;
+    }
+    
+    .deleteBtn {
+      top: 50px;
+    }
+    
+  }
+
+  

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { parseTemplate } from '../../utils/parseTemplate';
 import styles from './styles.module.css';
 
@@ -60,11 +60,12 @@ const PromptPage = ({ onDelete, onUpdate, prompts }) => {
     for (const variableName of variableNames) {
       const value = variableValues[variableName] || '';
       const regex = new RegExp(`#\\{${variableName}\\}`, 'g');
-      finalText = finalText.replace(regex, value);
+      finalText = finalText.replace(regex, `<strong>${value}</strong>`);
     }
   
     setOutput(finalText);
   };
+  
   
   
 
@@ -118,13 +119,19 @@ const PromptPage = ({ onDelete, onUpdate, prompts }) => {
             </button>
           </form>
           {output && (
-            <div className={styles.outputContainer}>
-              <pre>{output}</pre>
+          <div className={styles.outputContainer}>
+            <pre
+              className={styles.preOutput}
+              dangerouslySetInnerHTML={{ __html: output }}
+            ></pre>
+            <div className={styles.copyBtnWrapper}>
               <button className={styles.copyBtn} onClick={handleCopy}>
                 Copy
               </button>
             </div>
-          )}
+          </div>
+        )}
+
         </>
       ) : (
         <>
