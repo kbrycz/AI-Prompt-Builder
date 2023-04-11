@@ -7,7 +7,7 @@ const MobileNav = ({ prompts }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleNavigateToCreateScreen = () => {
-    navigate('/create');
+    navigate('/bob-the-prompt-builder/create');
     setMenuOpen(false);
   };
 
@@ -23,12 +23,12 @@ const MobileNav = ({ prompts }) => {
       <div className="dropdown-menu" style={{ display: menuOpen ? 'block' : 'none' }}>
         <ul>
           <li>
-            <NavLink activeClassName="active" exact to="/" onClick={toggleMenu}>
+            <NavLink activeClassName="active" exact to="/bob-the-prompt-builder/" onClick={toggleMenu}>
               <i className="fas fa-home"></i> Home
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName="active" to="/settings" onClick={toggleMenu}>
+            <NavLink activeClassName="active" to="/bob-the-prompt-builder/settings" onClick={toggleMenu}>
               <i className="fas fa-cog"></i> Settings
             </NavLink>
           </li>
@@ -37,7 +37,7 @@ const MobileNav = ({ prompts }) => {
             <li key={index}>
               <NavLink
                 activeClassName="active"
-                to={`/prompt/${name}`}
+                to={`/bob-the-prompt-builder/prompt/${name}`}
                 state={{ templateText }}
                 onClick={toggleMenu}
               >

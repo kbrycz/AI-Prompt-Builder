@@ -50,11 +50,11 @@ function App() {
         <MobileNav prompts={prompts} />
         <div className="page-container">
           <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/settings" element={<Settings setPrompts={setPrompts} />} />
-            <Route path="/create" element={<CreateScreen onCreate={handleCreatePrompt} />} />
+            <Route path="/bob-the-prompt-builder/" element={<Home />} />
+            <Route path="/bob-the-prompt-builder/settings" element={<Settings setPrompts={setPrompts} />} />
+            <Route path="/bob-the-prompt-builder/create" element={<CreateScreen onCreate={handleCreatePrompt} />} />
             <Route
-              path="/prompt/:name"
+              path="/bob-the-prompt-builder/prompt/:name"
               element={<PromptPage prompts={prompts} onDelete={handleDeletePrompt} onUpdate={updatePrompt} />}
             />
           </Routes>

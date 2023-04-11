@@ -40,7 +40,7 @@ const PromptPage = ({ onDelete, onUpdate, prompts }) => {
     e.preventDefault();
     onUpdate(name, updatedName, updatedTemplateText);
     setEditing(false);
-    navigate(`/prompt/${updatedName}`, { state: { templateText: updatedTemplateText } }); // Add this line
+    navigate(`/bob-the-prompt-builder/prompt/${updatedName}`, { state: { templateText: updatedTemplateText } }); // Add this line
   };
 
   const resetForm = () => {
@@ -119,21 +119,23 @@ const PromptPage = ({ onDelete, onUpdate, prompts }) => {
             </button>
           </form>
           {output && (
+            <>
           <div className={styles.outputContainer}>
             <pre
               className={styles.preOutput}
               dangerouslySetInnerHTML={{ __html: output }}
             ></pre>
-            <div className={styles.copyBtnWrapper}>
-              <button className={styles.copyBtn} onClick={handleCopy}>
-                Copy
-              </button>
-            </div>
           </div>
-        )}
-        <p className={styles.createdBy}>
+          <div className={styles.copyBtnWrapper}>
+            <button className={styles.copyBtn} onClick={handleCopy}>
+              Copy
+            </button>
+          </div>
+          <p className={styles.createdBy}>
           Created by Karl Brycz
         </p>
+          </>
+        )}
         </>
       ) : (
         <>

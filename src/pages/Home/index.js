@@ -2,16 +2,6 @@ import React from 'react';
 import styles from './styles.module.css';
 
 const Home = () => {
-  const handleCopy = (output) => {
-    navigator.clipboard.writeText(output).then(
-      () => {
-        console.log('Text copied to clipboard');
-      },
-      (err) => {
-        console.error('Could not copy text: ', err);
-      }
-    );
-  };
   return (
     <div className={styles.container}>
       <h1>Bob the Prompt Builder</h1>
@@ -27,23 +17,17 @@ const Home = () => {
         className={styles.outputStylingStrong}
           dangerouslySetInnerHTML={{
             __html: `
-Unhandled Rejection (Invariant Violation): Element type is invalid: expected a string (for built-in components) or a class/function 
-(for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, 
-or you might have mixed up default and named imports.
+Unhandled Rejection (Invariant Violation): Element type is invalid: 
+expected a string (for built-in components) or a class/function 
+(for composite components) but got: undefined.
 
 Check the render method of 'App'.
     at ReactDOMServerRenderer.render (react-dom-server.browser.development.js:2540)
     at ReactDOMServerRenderer.read (react-dom-server.browser.development.js:2487)
-
             `,
           }}
         />
         <p className={styles.outputStyling}>Please explain it to me like im a beginner programmer!</p>
-          <div className={styles.copyBtnWrapper}>
-            <button className={styles.copyBtn} onClick={handleCopy}>
-              Copy
-            </button>
-          </div>
         </div>
 
     </div>

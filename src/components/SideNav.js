@@ -10,19 +10,19 @@ const SideNav = ({ prompts }) => {
   }, [prompts]);
 
   const handleNavigateToCreateScreen = () => {
-    navigate('/create');
+    navigate('/bob-the-prompt-builder/create');
   };
 
   return (
     <nav className="side-nav">
       <ul>
         <li>
-          <NavLink activeClassName="active" exact to="/">
+          <NavLink activeClassName="active" exact to="/bob-the-prompt-builder/">
             <i className="fas fa-home"></i> Home
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName="active" to="/settings">
+          <NavLink activeClassName="active" to="/bob-the-prompt-builder/settings">
             <i className="fas fa-cog"></i> Settings
           </NavLink>
         </li>
@@ -31,7 +31,7 @@ const SideNav = ({ prompts }) => {
       {prompts.map(({ name, templateText }, index) => (
         <ul key={index}>
           <li>
-            <NavLink activeClassName="active" to={`/prompt/${name}`} state={{ templateText }}>
+            <NavLink activeClassName="active" to={`/bob-the-prompt-builder/prompt/${name}`} state={{ templateText }}>
               {name}
             </NavLink>
           </li>

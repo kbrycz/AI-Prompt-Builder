@@ -12,7 +12,7 @@ const CreateScreen = ({ onCreate }) => {
     e.preventDefault();
     if (name && templateText) {
       onCreate(name, templateText);
-      navigate(`/prompt/${name}`, { state: { templateText } });
+      navigate(`/bob-the-prompt-builder/prompt/${name}`, { state: { templateText } });
     }
   };
   

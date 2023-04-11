@@ -142,9 +142,7 @@
   }
   
   .copyBtn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    margin: auto;
     background-color: #444;
     color: #ccc;
     border: none;
@@ -154,6 +152,7 @@
     font-size: 14px;
     opacity: 0.7;
     border-radius: 5px;
+    margin-top: 20px;
   }
   
   .copyBtn:hover {
@@ -194,12 +193,20 @@
       margin-right: 5%;
     }
 
+    .container {
+      padding-top: 40px;
+    }
+
     .editBtn {
-      top: 50px;
+      top: 60px;
     }
     
     .deleteBtn {
-      top: 50px;
+      top: 60px;
+    }
+
+    .outputContainer {
+      width: 90%;
     }
     
   }

@@ -81,6 +81,6 @@ ul {
 /* Add the following rule at the end of the file */
 @media (max-width: 768px) {
   .outputContainer2 {
-    width: 95%;
+    width: 100%;
   }
 }
