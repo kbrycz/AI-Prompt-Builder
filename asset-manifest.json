@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AI-Prompt-Builder/static/css/main.34226162.css",
-    "main.js": "/AI-Prompt-Builder/static/js/main.68a8ef49.js",
-    "static/js/787.4f2f7288.chunk.js": "/AI-Prompt-Builder/static/js/787.4f2f7288.chunk.js",
-    "index.html": "/AI-Prompt-Builder/index.html",
-    "main.34226162.css.map": "/AI-Prompt-Builder/static/css/main.34226162.css.map",
-    "main.68a8ef49.js.map": "/AI-Prompt-Builder/static/js/main.68a8ef49.js.map",
-    "787.4f2f7288.chunk.js.map": "/AI-Prompt-Builder/static/js/787.4f2f7288.chunk.js.map"
+    "main.css": "/bob-the-prompt-builder/static/css/main.77c50ea9.css",
+    "main.js": "/bob-the-prompt-builder/static/js/main.6ec43bcf.js",
+    "static/js/787.4f2f7288.chunk.js": "/bob-the-prompt-builder/static/js/787.4f2f7288.chunk.js",
+    "index.html": "/bob-the-prompt-builder/index.html",
+    "main.77c50ea9.css.map": "/bob-the-prompt-builder/static/css/main.77c50ea9.css.map",
+    "main.6ec43bcf.js.map": "/bob-the-prompt-builder/static/js/main.6ec43bcf.js.map",
+    "787.4f2f7288.chunk.js.map": "/bob-the-prompt-builder/static/js/787.4f2f7288.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34226162.css",
-    "static/js/main.68a8ef49.js"
+    "static/css/main.77c50ea9.css",
+    "static/js/main.6ec43bcf.js"
   ]
 }
