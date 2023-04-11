@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AI-Prompt-Builder/static/css/main.34226162.css",
+    "main.js": "/AI-Prompt-Builder/static/js/main.68a8ef49.js",
+    "static/js/787.4f2f7288.chunk.js": "/AI-Prompt-Builder/static/js/787.4f2f7288.chunk.js",
+    "index.html": "/AI-Prompt-Builder/index.html",
+    "main.34226162.css.map": "/AI-Prompt-Builder/static/css/main.34226162.css.map",
+    "main.68a8ef49.js.map": "/AI-Prompt-Builder/static/js/main.68a8ef49.js.map",
+    "787.4f2f7288.chunk.js.map": "/AI-Prompt-Builder/static/js/787.4f2f7288.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34226162.css",
+    "static/js/main.68a8ef49.js"
+  ]
+}
