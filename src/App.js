@@ -50,7 +50,7 @@ function App() {
         <MobileNav prompts={prompts} />
         <div className="page-container">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
             <Route path="/settings" element={<Settings setPrompts={setPrompts} />} />
             <Route path="/create" element={<CreateScreen onCreate={handleCreatePrompt} />} />
             <Route

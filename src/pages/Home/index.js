@@ -45,14 +45,6 @@ Check the render method of 'App'.
             </button>
           </div>
         </div>
-        <p className={styles.featuresHeading}>
-          With this tool, you can:
-        </p>
-        <ul className={styles.featuresList}>
-          <li className={styles.featuresListItem}>Create reusable prompt templates</li>
-          <li className={styles.featuresListItem}>Easily insert variables into your prompts</li>
-          <li className={styles.featuresListItem}>Speed up the prompt creation process</li>
-        </ul>
 
     </div>
   );

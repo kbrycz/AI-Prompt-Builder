@@ -131,7 +131,9 @@ const PromptPage = ({ onDelete, onUpdate, prompts }) => {
             </div>
           </div>
         )}
-
+        <p className={styles.createdBy}>
+          Created by Karl Brycz
+        </p>
         </>
       ) : (
         <>
