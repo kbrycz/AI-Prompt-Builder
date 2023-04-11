@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bob-the-prompt-builder/static/css/main.6beab0ed.css",
-    "main.js": "/bob-the-prompt-builder/static/js/main.1aec6905.js",
+    "main.js": "/bob-the-prompt-builder/static/js/main.c20bdb90.js",
     "static/js/787.4f2f7288.chunk.js": "/bob-the-prompt-builder/static/js/787.4f2f7288.chunk.js",
     "index.html": "/bob-the-prompt-builder/index.html",
     "main.6beab0ed.css.map": "/bob-the-prompt-builder/static/css/main.6beab0ed.css.map",
-    "main.1aec6905.js.map": "/bob-the-prompt-builder/static/js/main.1aec6905.js.map",
+    "main.c20bdb90.js.map": "/bob-the-prompt-builder/static/js/main.c20bdb90.js.map",
     "787.4f2f7288.chunk.js.map": "/bob-the-prompt-builder/static/js/787.4f2f7288.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6beab0ed.css",
-    "static/js/main.1aec6905.js"
+    "static/js/main.c20bdb90.js"
   ]
 }
