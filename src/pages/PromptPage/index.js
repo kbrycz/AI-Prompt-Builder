@@ -26,7 +26,7 @@ const PromptPage = ({ onDelete, onUpdate, prompts }) => {
   const handleDelete = () => {
     onDelete(name);
     if (prompts.length === 1) {
-      navigate('/');
+      navigate('/bob-the-prompt-builder');
     } else {
       navigate(-1);
     }
