@@ -6,7 +6,7 @@ const Home = () => {
     <div className={styles.container}>
       <h1>Bob the Prompt Builder</h1>
       <p>
-        Welcome to the AI Prompt Builder, a tool designed to help you create
+        Welcome to Bob the Prompt Builder, a tool designed to help you create
         effective prompts for your AI chatbots, quickly and efficiently.
       </p>
 
