@@ -14,6 +14,8 @@ const PromptPage = ({ onDelete, onUpdate, prompts }) => {
   const [updatedName, setUpdatedName] = useState(name);
   const [updatedTemplateText, setUpdatedTemplateText] = useState(templateText);
   const [allInputsFilled, setAllInputsFilled] = useState(false);
+  const [plainTextOutput, setPlainTextOutput] = useState('');
+
 
   useEffect(() => {
     const areAllInputsFilled = variableNames.every(
@@ -56,21 +58,21 @@ const PromptPage = ({ onDelete, onUpdate, prompts }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let finalText = templateText;
+    let plainText = templateText;
   
     for (const variableName of variableNames) {
       const value = variableValues[variableName] || '';
       const regex = new RegExp(`#\\{${variableName}\\}`, 'g');
       finalText = finalText.replace(regex, `<strong>${value}</strong>`);
+      plainText = plainText.replace(regex, `${value}`);
     }
   
     setOutput(finalText);
+    setPlainTextOutput(plainText);
   };
-  
-  
-  
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(output).then(
+    navigator.clipboard.writeText(plainTextOutput).then(
       () => {
         console.log('Text copied to clipboard');
       },
@@ -79,6 +81,7 @@ const PromptPage = ({ onDelete, onUpdate, prompts }) => {
       }
     );
   };
+  
 
   return (
     <div className={styles.container}>
